@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    image: hello
+    container_name: container-tets
+    build: 
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - "5000:4000"
+  mongo:
+    image: mongo:4.4.10
+    container_name: mongdb
+    ports:
+      - 27019:27017
